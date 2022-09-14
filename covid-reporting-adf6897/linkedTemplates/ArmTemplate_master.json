@@ -23,10 +23,6 @@
 			"type": "string",
 			"defaultValue": "https://ecdc.blob.core.windows.net"
 		},
-		"tr_ingest_population_data_properties_typeProperties_scope": {
-			"type": "string",
-			"defaultValue": "/subscriptions/ca46c78a-caaa-4dd9-8b55-c5c40bb4ce1a/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportingsa6897"
-		},
 		"tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_sourceRelativeURL": {
 			"type": "string",
 			"defaultValue": "covid19/hospital_admissions.csv"
@@ -34,6 +30,10 @@
 		"tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_sinkFileName": {
 			"type": "string",
 			"defaultValue": "hospital_admissions.csv"
+		},
+		"tr_ingest_population_data_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/ca46c78a-caaa-4dd9-8b55-c5c40bb4ce1a/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportingsa6897"
 		},
 		"containerUri": {
 			"type": "string",
@@ -74,14 +74,14 @@
 					"ls_http_opendata_ecdc_eu_properties_typeProperties_url": {
 						"value": "[parameters('ls_http_opendata_ecdc_eu_properties_typeProperties_url')]"
 					},
-					"tr_ingest_population_data_properties_typeProperties_scope": {
-						"value": "[parameters('tr_ingest_population_data_properties_typeProperties_scope')]"
-					},
 					"tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_sourceRelativeURL": {
 						"value": "[parameters('tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_sourceRelativeURL')]"
 					},
 					"tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_sinkFileName": {
 						"value": "[parameters('tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_sinkFileName')]"
+					},
+					"tr_ingest_population_data_properties_typeProperties_scope": {
+						"value": "[parameters('tr_ingest_population_data_properties_typeProperties_scope')]"
 					}
 				}
 			},
