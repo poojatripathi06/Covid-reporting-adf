@@ -21,7 +21,7 @@
 		},
 		"ls_http_opendata_ecdc_eu_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://github.com"
+			"defaultValue": "https://ecdc.blob.core.windows.net"
 		},
 		"tr_ingest_population_data_properties_typeProperties_scope": {
 			"type": "string",
@@ -328,7 +328,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "HttpServerLocation",
-						"relativeUrl": "cloudboxacademy/covid19/blob/main/ecdc_data/cases_deaths.csv"
+						"relativeUrl": "covid19/cases_deaths.csv"
 					},
 					"columnDelimiter": ",",
 					"escapeChar": "\\",
