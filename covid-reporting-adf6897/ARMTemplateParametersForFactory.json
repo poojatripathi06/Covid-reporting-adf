@@ -17,6 +17,9 @@
 		"ls_http_opendata_ecdc_eu_properties_typeProperties_url": {
 			"value": "https://ecdc.blob.core.windows.net"
 		},
+		"ls_http_opendata_ecdc_eu_fixed_properties_typeProperties_url": {
+			"value": "@linkedService().sourceBaseURL"
+		},
 		"tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_sourceRelativeURL": {
 			"value": "covid19/hospital_admissions.csv"
 		},

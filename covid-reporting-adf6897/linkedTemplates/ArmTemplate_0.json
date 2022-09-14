@@ -23,6 +23,10 @@
 			"type": "string",
 			"defaultValue": "https://ecdc.blob.core.windows.net"
 		},
+		"ls_http_opendata_ecdc_eu_fixed_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "@linkedService().sourceBaseURL"
+		},
 		"tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_sourceRelativeURL": {
 			"type": "string",
 			"defaultValue": "covid19/hospital_admissions.csv"
@@ -79,6 +83,26 @@
 				"type": "HttpServer",
 				"typeProperties": {
 					"url": "[parameters('ls_http_opendata_ecdc_eu_properties_typeProperties_url')]",
+					"enableServerCertificateValidation": true,
+					"authenticationType": "Anonymous"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ls_http_opendata_ecdc_eu_fixed')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"parameters": {
+					"sourceBaseURL": {
+						"type": "string"
+					}
+				},
+				"annotations": [],
+				"type": "HttpServer",
+				"typeProperties": {
+					"url": "[parameters('ls_http_opendata_ecdc_eu_fixed_properties_typeProperties_url')]",
 					"enableServerCertificateValidation": true,
 					"authenticationType": "Anonymous"
 				}
