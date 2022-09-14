@@ -1,7 +1,7 @@
 {
 	"name": "ds_population_raw_gz",
 	"properties": {
-		"description": "Covid reporting: Population by age provided by ecdc website",
+		"description": "Covid reporting: Population by age provided by ecdc website.",
 		"linkedServiceName": {
 			"referenceName": "ls_ablob_covidreportingsa",
 			"type": "LinkedServiceReference"
