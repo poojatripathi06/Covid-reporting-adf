@@ -8,10 +8,6 @@
 				"pipelineReference": {
 					"referenceName": "pl_ingest_ecdc_data",
 					"type": "PipelineReference"
-				},
-				"parameters": {
-					"sourceRelativeURL": "covid19/hospital_admissions.csv",
-					"sinkFileName": "hospital_admissions.csv"
 				}
 			}
 		],
