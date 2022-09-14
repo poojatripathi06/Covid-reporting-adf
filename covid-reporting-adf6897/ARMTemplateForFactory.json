@@ -19,10 +19,6 @@
 			"type": "string",
 			"defaultValue": "https://covidreportingdl68977.dfs.core.windows.net/"
 		},
-		"ls_http_opendata_ecdc_eu_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://ecdc.blob.core.windows.net"
-		},
 		"ls_http_opendata_ecdc_eu_fixed_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "@linkedService().sourceBaseURL"
@@ -102,6 +98,10 @@
 									"relativeURL": {
 										"value": "@pipeline().parameters.sourceRelativeURL",
 										"type": "Expression"
+									},
+									"baseURL": {
+										"value": "@pipeline().parameters.sourceBaseURL",
+										"type": "Expression"
 									}
 								}
 							}
@@ -129,6 +129,9 @@
 						"type": "string"
 					},
 					"sinkFileName": {
+						"type": "string"
+					},
+					"sourceBaseURL": {
 						"type": "string"
 					}
 				},
@@ -392,11 +395,20 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ls_http_opendata_ecdc_eu",
-					"type": "LinkedServiceReference"
+					"referenceName": "ls_http_opendata_ecdc_eu_fixed",
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"sourceBaseURL": {
+							"value": "@dataset().baseURL",
+							"type": "Expression"
+						}
+					}
 				},
 				"parameters": {
 					"relativeURL": {
+						"type": "string"
+					},
+					"baseURL": {
 						"type": "string"
 					}
 				},
@@ -418,7 +430,7 @@
 				"schema": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ls_http_opendata_ecdc_eu')]"
+				"[concat(variables('factoryId'), '/linkedServices/ls_http_opendata_ecdc_eu_fixed')]"
 			]
 		},
 		{
@@ -507,21 +519,6 @@
 						"type": "SecureString",
 						"value": "[parameters('ls_adls_covidreportingdl_accountKey')]"
 					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ls_http_opendata_ecdc_eu')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "HttpServer",
-				"typeProperties": {
-					"url": "[parameters('ls_http_opendata_ecdc_eu_properties_typeProperties_url')]",
-					"enableServerCertificateValidation": true,
-					"authenticationType": "Anonymous"
 				}
 			},
 			"dependsOn": []

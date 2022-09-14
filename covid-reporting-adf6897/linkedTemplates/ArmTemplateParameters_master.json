@@ -14,9 +14,6 @@
 		"ls_adls_covidreportingdl_properties_typeProperties_url": {
 			"value": "https://covidreportingdl68977.dfs.core.windows.net/"
 		},
-		"ls_http_opendata_ecdc_eu_properties_typeProperties_url": {
-			"value": "https://ecdc.blob.core.windows.net"
-		},
 		"ls_http_opendata_ecdc_eu_fixed_properties_typeProperties_url": {
 			"value": "@linkedService().sourceBaseURL"
 		},
