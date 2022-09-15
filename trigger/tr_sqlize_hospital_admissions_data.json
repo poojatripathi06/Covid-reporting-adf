@@ -13,7 +13,7 @@
 		"typeProperties": {
 			"frequency": "Hour",
 			"interval": 24,
-			"startTime": "2022-09-14T00:21:00Z",
+			"startTime": "2022-09-15T14:30:00Z",
 			"delay": "00:00:00",
 			"maxConcurrency": 50,
 			"retryPolicy": {
@@ -22,7 +22,6 @@
 			"dependsOn": [
 				{
 					"type": "TumblingWindowTriggerDependencyReference",
-					"offset": "-0.00:21:00",
 					"referenceTrigger": {
 						"referenceName": "tr_process_hospital_admissions_data",
 						"type": "TriggerReference"
