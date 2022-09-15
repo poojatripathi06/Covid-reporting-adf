@@ -40,7 +40,9 @@
 						"mappings": [
 							{
 								"source": {
-									"name": ""
+									"name": "country",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "country",
@@ -50,7 +52,9 @@
 							},
 							{
 								"source": {
-									"name": ""
+									"name": "country_code_2_digit",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "country_code_2_digit",
@@ -60,7 +64,9 @@
 							},
 							{
 								"source": {
-									"name": ""
+									"name": "country_code_3_digit",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "country_code_3_digit",
@@ -70,7 +76,9 @@
 							},
 							{
 								"source": {
-									"name": ""
+									"name": "population",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "population",
@@ -80,7 +88,9 @@
 							},
 							{
 								"source": {
-									"name": ""
+									"name": "reported_date",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "reported_date",
@@ -90,7 +100,21 @@
 							},
 							{
 								"source": {
-									"name": ""
+									"name": " hospital_occupancy_count",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "hospital_occupancy_count",
+									"type": "Int64",
+									"physicalType": "bigint"
+								}
+							},
+							{
+								"source": {
+									"name": "ICU_occupancy_count",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "icu_occupancy_count",
@@ -100,7 +124,9 @@
 							},
 							{
 								"source": {
-									"name": ""
+									"name": "source",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "source",
