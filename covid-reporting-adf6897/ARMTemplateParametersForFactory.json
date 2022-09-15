@@ -23,7 +23,7 @@
 		"ls_http_opendata_ecdc_eu_fixed_properties_typeProperties_url": {
 			"value": "@linkedService().sourceBaseURL"
 		},
-		"tr_ingest_population_data_properties_typeProperties_scope": {
+		"tr_population_data_arrived_properties_typeProperties_scope": {
 			"value": "/subscriptions/ca46c78a-caaa-4dd9-8b55-c5c40bb4ce1a/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportingsa6897"
 		}
 	}
