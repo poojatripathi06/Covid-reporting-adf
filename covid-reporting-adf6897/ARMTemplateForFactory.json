@@ -1697,7 +1697,7 @@
 							},
 							"sink": {
 								"type": "AzureSqlSink",
-								"preCopyScript": "TRUNCATE TABLE  covid_reporting.hospital_admissions_daily;",
+								"preCopyScript": "TRUNCATE TABLE  [covid_reporting].[hospital_admissions_daily];",
 								"writeBehavior": "insert",
 								"sqlWriterUseTableLock": false,
 								"disableMetricsCollection": false
