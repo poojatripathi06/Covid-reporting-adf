@@ -21,7 +21,12 @@
 			},
 			"dependsOn": [
 				{
-					"type": "SelfDependencyTumblingWindowTriggerReference"
+					"type": "TumblingWindowTriggerDependencyReference",
+					"offset": "-0.23:33:00",
+					"referenceTrigger": {
+						"referenceName": "tr_ingest_ecdc_data",
+						"type": "TriggerReference"
+					}
 				}
 			]
 		}
